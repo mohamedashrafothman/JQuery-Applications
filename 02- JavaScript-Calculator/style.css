@@ -1,0 +1,166 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:100,400,700");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #FDFDFD;
+  font-family: "Roboto", sans-serif;
+  overflow-x: hidden;
+}
+body li {
+  list-style: none;
+}
+body .circle {
+  width: 700px;
+  height: 700px;
+  z-index: 555 !important;
+  border-radius: 50%;
+  position: absolute;
+  opacity: 0.6;
+}
+body .green {
+  background-color: #2ecc71;
+  float: left;
+  top: 50px;
+  left: -100px;
+}
+body .blue {
+  background-color: #3498db;
+  float: right !important;
+  top: -200px;
+  right: -200px !important;
+}
+body .yellow {
+  background-color: #f1c40f;
+  float: right !important;
+  top: 150px;
+  right: 0px !important;
+}
+body .calc {
+  position: relative;
+  z-index: 99999;
+  width: 380px;
+  height: auto;
+  padding: 10px 0;
+  margin: 50px auto;
+  background-color: #FDFDFD;
+  border: 0px;
+  box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 20px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 20px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.2) 5px 10px 20px;
+  overflow: hidden;
+  text-align: center;
+}
+body .calc .screen {
+  width: 85%;
+  height: 93px;
+  margin: 12px auto 30px;
+  padding: 5px 20px;
+  color: #7f8c8d;
+  text-align: right;
+  font-size: 4em;
+  font-weight: lighter;
+  letter-spacing: 3px;
+  overflow: hidden;
+  background-color: #FDFDFD;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  text-shadow: #ecf0f1 3px 3px 10px;
+  -webkit-text-shadow: #ecf0f1 3px 3px 10px;
+  -moz-text-shadow: #ecf0f1 3px 3px 10px;
+}
+body .calc .buttons {
+  color: #7f8c8d;
+  padding: 0;
+  width: 85%;
+  margin: auto;
+  overflow: hidden;
+  list-style: none;
+  /* tall = button */
+  /* Wide 0 */
+  /* shift last row up, because the tall button pushes it down */
+}
+body .calc .buttons .equal {
+  color: #FDFDFD;
+}
+body .calc .buttons li {
+  display: inline;
+  float: left;
+  padding: 0px;
+  margin-right: 13px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  background-color: #FDFDFD;
+}
+body .calc .buttons li:nth-child(4n) {
+  margin-right: 0;
+}
+body .calc .buttons a {
+  display: block;
+  width: 70px;
+  height: 70px;
+  padding-top: 3px;
+  color: #7f8c8d;
+  font-family: "Roboto", sans-serif;
+  font-size: 2.5em;
+  font-weight: 100;
+  letter-spacing: -2px;
+  background-color: #FDFDFD;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  text-align: center;
+  text-decoration: none;
+  text-shadow: #ecf0f1 3px 3px 5px;
+  -webkit-text-shadow: #ecf0f1 3px 3px 5px;
+  -moz-text-shadow: #ecf0f1 3px 3px 5px;
+  cursor: pointer;
+}
+body .calc .buttons .tall {
+  width: 60px !important;
+  height: 155px !important;
+  background-color: #fe9695;
+  border-radius: 29px !important;
+  margin-left: 5px;
+  text-shadow: 0px 0px 0px !important;
+  -webkit-text-shadow: 0px 0px 0px !important;
+  -moz-text-shadow: 0px 0px 0px !important;
+  box-shadow: #fe9695 1px 1px 10px !important;
+  -webkit-box-shadow: #fe9695 1px 1px 10px !important;
+  -moz-box-shadow: #fe9695 1px 1px 10px !important;
+  padding-top: 90px;
+  transition: all 0.1s ease-in-out;
+}
+body .calc .buttons .tall:active, body .calc .buttons .tall:hover {
+  box-shadow: #fe9695 0px 0px 0px !important;
+  -webkit-box-shadow: #fe9695 0px 0px 0px !important;
+  -moz-box-shadow: #fe9695 0px 0px 0px !important;
+  color: #FDFDFD;
+}
+body .calc .buttons .wide {
+  margin-left: 90px;
+}
+body .calc .buttons .shift {
+  margin-top: -78px;
+}
+body .calc .buttons .gray_color {
+  background-color: #ecf0f1 !important;
+}
+body footer {
+  text-align: center;
+  font-size: 20px;
+  font-family: "Roboto", sans-serif;
+  position: relative;
+  z-index: 666;
+}
+body footer a {
+  font-weight: bold;
+  color: #7f8c8d;
+}
+body footer a:hover, body footer a:focus {
+  text-decoration: none;
+}
