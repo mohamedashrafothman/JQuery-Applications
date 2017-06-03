@@ -18,19 +18,37 @@ $(document).ready(function(){
 			slider.$nextArrow 	= $('.next');
 			slider.$prevArrow 	= $('.prev');
 			slider.$dots 		= $('.dot');
-			slider.$slides 		= $('.mySlide');	// select first slide div
+			slider.$slides 	= $('.mySlide');	// select first slide div
 			slider.$slideIndex 	= slider.$slides.first().length;	// equal '1'
 		},
 		bindEvents: function(){
 			// 'Next' and 'Previes' buttons events
-			slider.$prevArrow.on('click', function(){slider.MoveSlide(-1);});
-			slider.$nextArrow.on('click', function(){slider.MoveSlide(1);});
+			slider.$prevArrow.on('click', function(){
+				slider.pauseAutomatic();
+				slider.MoveSlide(-1);
+			});
+			slider.$nextArrow.on('click', function(){
+				slider.pauseAutomatic();
+				slider.MoveSlide(1);
+			});
 			
 			// 'Dots' buttons events
-			slider.$dots.eq(0).on('click', function(){slider.CurrentSlide(1);});
-			slider.$dots.eq(1).on('click', function(){slider.CurrentSlide(2);});
-			slider.$dots.eq(2).on('click', function(){slider.CurrentSlide(3);});
-			slider.$dots.eq(3).on('click', function(){slider.CurrentSlide(4);});
+			slider.$dots.eq(0).on('click', function(){
+				slider.pauseAutomatic();
+				slider.CurrentSlide(1);
+			});
+			slider.$dots.eq(1).on('click', function(){
+				slider.pauseAutomatic();
+				slider.CurrentSlide(2);
+			});
+			slider.$dots.eq(2).on('click', function(){
+				slider.pauseAutomatic();
+				slider.CurrentSlide(3);
+			});
+			slider.$dots.eq(3).on('click', function(){
+				slider.pauseAutomatic();
+				slider.CurrentSlide(4);
+			});
 
 		},
 		ShowSlide: function(n){
@@ -70,11 +88,13 @@ $(document).ready(function(){
 			slider.$slides.eq(slider.$slideIndex-1).css({display:'block'});
 			slider.$dots.eq(slider.$slideIndex-1).addClass('active');
 
-			setTimeout(slider.AutomaticSlide, 5000);
-			}
+			slider.$timeOut = setTimeout(slider.AutomaticSlide, 5000);
+		},
+		pauseAutomatic: function(){
+			clearTimeout(slider.$timeOut);
+		}
 
 
 	};
-	
-	slider.init(auto = true); // set "auto" by false to unable automatic slideshow
+	slider.init(auto = true); // set automatic by True to enable automatic slideshow
 });
