@@ -18,7 +18,7 @@ $(document).ready(function(){
 			slider.$nextArrow 	= $('.next');
 			slider.$prevArrow 	= $('.prev');
 			slider.$dots 		= $('.dot');
-			slider.$slides 	= $('.mySlide');	// select first slide div
+			slider.$slides 		= $('.mySlide');	// select first slide div
 			slider.$slideIndex 	= slider.$slides.first().length;	// equal '1'
 		},
 		bindEvents: function(){
@@ -70,11 +70,11 @@ $(document).ready(function(){
 			slider.$slides.eq(slider.$slideIndex-1).css({display:'block'});
 			slider.$dots.eq(slider.$slideIndex-1).addClass('active');
 
-			setTimeout(slider.AutomaticSlide, 2500);
+			setTimeout(slider.AutomaticSlide, 5000);
 			}
 
 
 	};
 	
-	slider.init(auto = false); // set "auto" by True to enable automatic slideshow
+	slider.init(auto = true); // set "auto" by false to unable automatic slideshow
 });
