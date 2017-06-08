@@ -81,9 +81,13 @@ body {
 }
 .container .dot_container .dot:hover {
   background-color: #bdc3c7;
+  -webkit-transform: scale(1.4, 1.4);
+          transform: scale(1.4, 1.4);
 }
 .container .dot_container .active {
   background-color: #34495e;
+  -webkit-transform: scale(1.4, 1.4);
+          transform: scale(1.4, 1.4);
 }
 .container .fade {
   -webkit-animation-name: fade;
