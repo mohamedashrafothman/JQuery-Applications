@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Bookmark App</title>
+		<link rel="stylesheet" href="https://bootswatch.com/paper/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/style.css">
+
+	</head>
+	<body>
+
+
+		<div class="container">
+		  <div class="header clearfix">
+		    <h3 class="text-muted">Bookmark App</h3>
+		  </div>
+
+		  <div class="jumbotron">
+		    <h2>Bookmark your facourite site</h2>
+			<form id="myForm">
+				<fieldset>
+					<div class="form-group">
+						<label><h4>Site Name</h4></label>
+						<input type="text" class="form-control" id="siteName" placeholder="Website Name">
+					</div>
+					<div class="form-group">
+						<label><h4>Site Url</h4></label>
+						<input type="text" class="form-control" id="siteURL" placeholder="Website URL">
+					</div>
+					<button type="submit" class="btn btn-primary">Submit</button>
+				</fieldset>
+			</form>
+		  </div>
+
+		  <div class="row marketing">
+	     	<div class="col-lg-12">
+				<div id="bookmarksResults"></div>
+	     	</div>
+
+		  <footer class="footer">
+		    <p>&copy; 2017 Bookmarker, Inc.</p>
+		  </footer>
+
+		</div> <!-- /container -->
+
+		<script
+		  src="https://code.jquery.com/jquery-3.2.1.min.js"
+		  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+		  crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="assets/script.js"></script>
+	</body>
+</html>
