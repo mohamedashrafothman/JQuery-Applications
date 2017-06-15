@@ -1,5 +1,9 @@
+/*
+*   ------Simple Bookmarker------
+*   Copyright (c) 2017 Mohamed Ashraf.
+*   License under the MIT license.
+*/
 $(document).ready(function(){
-
 	var bookmarkApp = {
 		init: function(){
 			this.fetchHTML();
@@ -9,7 +13,6 @@ $(document).ready(function(){
 		fetchHTML: function(){
 			this.$form = $('#myForm');
 			this.$bookmarksResults = $('#bookmarksResults');
-			// this.$dangerButton = $('.btn-danger');
 		},
 		bindEvents: function(){
 			this.$form.on('submit', this.saveBookmark.bind(this));
@@ -18,16 +21,13 @@ $(document).ready(function(){
 			e.preventDefault();
 			this.$siteName = this.$form.find('#siteName').val();
 			this.$siteUrl = this.$form.find('#siteURL').val();
-
 			if(!this.validateForm(this.$siteName, this.$siteUrl)){
 				return false;
 			}
-
 			this.$bookmark = {
 				name: this.$siteName,
 				url: this.$siteUrl
 			};
-
 			if(localStorage.getItem('this.$bookmarks') === null){
 				this.$bookmarks = [];
 				this.$bookmarks.push(this.$bookmark);
@@ -38,11 +38,8 @@ $(document).ready(function(){
 				this.$bookmarks.push(this.$bookmark);
 				localStorage.setItem('this.$bookmarks', JSON.stringify(this.$bookmarks));
 			}
-
 			this.$form.trigger("reset");
-
 			this.fetchBookmarks();
-
 		},
 		fetchBookmarks: function(){
 			this.$bookmarks = JSON.parse(localStorage.getItem('this.$bookmarks')).sort(function(a, b){
@@ -50,7 +47,6 @@ $(document).ready(function(){
 				if(a.name > b.name) return 1;
 				return 0;
 			});
-
 			if(this.$bookmarks !== null){
 				this.$bookmarksResults.html('');
 				for(var i=0 ; i<this.$bookmarks.length ; i++){
@@ -87,18 +83,13 @@ $(document).ready(function(){
 			alert('plese fill in the form');
 			return false;
 		}
-
 		var regex = new RegExp(/[-a-zA-Z0-9@:%_\+.~#?&//=]{2,256}\.[a-z]{2,4}\b(\/[-a-zA-Z0-9@:%_\+.~#?&//=]*)?/gi);
 		if (!$siteUrl.match(regex)) {
 		  alert("Please use valied url");
 		  return false;
 		}
-
 		return true;
 		}
 	};
-
 	bookmarkApp.init();
-
-
 });
