@@ -1,0 +1,33 @@
+*{
+    padding: 0px;
+    margin:0px;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+}
+body{
+    // padding: 200px 0px;
+    background-image: url(http://subtlepatterns2015.subtlepatterns.netdna-cdn.com/patterns/px_by_Gre3g.png);
+}
+#photoshow{
+    width: 410px;
+    height: 310px;
+    border: 5px solid #fff;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    margin:auto;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    div{
+        position: absolute;
+        z-index: 0;
+    }
+    .current{
+        z-index: 2;
+    }
+    .prev{
+        z-index: 1;
+    }
+    
+}
