@@ -1,20 +1,20 @@
 (function($) {
     const slider_1 = {
         init: function(){
-            slider_1.render();
-            slider_1.slide();
+            this.render();
+            this.slide();
         },
         render: function(){
-            slider_1.$photoshow = $('#photoshow');
-            slider_1.$current   = slider_1.$photoshow.find('div.current');
-            slider_1.$next      = slider_1.$current.next();
+            this.$photoshow = $('#photoshow');
+            this.$current   = this.$photoshow.find('div.current');
+            this.$next      = this.$current.next();
         },
         slide: function(){
-            if(slider_1.$next.length === 0){
-                slider_1.$next = slider_1.$photoshow.find('div:first');
+            if(this.$next.length === 0){
+                this.$next = this.$photoshow.find('div:first');
             }
-            slider_1.$current.removeClass('current').addClass('prev');
-            slider_1.$next.css({
+            this.$current.removeClass('current').addClass('prev');
+            this.$next.css({
                     opacity: 0.0
                 }).addClass('current').animate({
                         opacity: 1
@@ -23,5 +23,5 @@
             });
         }
     }
-    setInterval(slider_1.init, 4000);
+    setInterval(slider_1.init.bind(slider_1), 2000);
 })(jQuery);
