@@ -7,3 +7,27 @@ body {
 .floatRight{
 	float: right;
 }
+#bookmarksResults{
+  margin-bottom: 50px;
+}
+.card{
+  margin: 10px 0px;
+}
+.card h3{
+  /* padding-top: 20px; */
+  margin: 0px;
+  padding: 20px 20px;
+}
+.btn{
+  color: black;
+}
+.btn:hover{
+  color: black;
+  cursor: pointer;
+}
+.submit{
+  color: white;
+}
+.submit:hover{
+  color: white;
+}

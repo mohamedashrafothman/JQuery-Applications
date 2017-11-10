@@ -53,7 +53,7 @@ $(document).ready(function(){
                     var $name = this.$bookmarks[i].name;
                     var $url = this.$bookmarks[i].url;
                     this.$bookmarksResults.append(`
-                        <div class="well">
+                        <div class="card text-black bg-light">
                             <h3>${$name}
                                 <div class="floatRight">
                                     <a class="btn btn-default" target="_blank" href="${$url}">Visit</a>
@@ -61,12 +61,12 @@ $(document).ready(function(){
                                 </div>
                             </h3>
                         </div>
-                        `).find('.well').addClass(this.$addAnimation).one(this.$stopAnimation, function() {
-                            $('.well').removeClass(this.$addAnimation);
+                        `).find('.card').addClass(this.$addAnimation).one(this.$stopAnimation, function() {
+                            $('.card').removeClass(this.$addAnimation);
                         });
             
                     $('.btn-danger').on('click', ()=> {
-                        $('.btn-danger').closest('.well').addClass(this.$deleteAnimation).one(this.$stopAnimation, ()=> {
+                        $('.btn-danger').closest('.card').addClass(this.$deleteAnimation).one(this.$stopAnimation, ()=> {
                            $(this).removeClass(this.$deleteAnimation);
                         app.deleteBookmark(`${$url}`);
                         });
